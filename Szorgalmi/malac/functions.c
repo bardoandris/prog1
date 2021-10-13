@@ -48,7 +48,7 @@ void initzoldseg(zoldseg *z1, zoldseg *z2){
 }
 void inithatar(float *sohat, float *fehhat, float *szenhat, int *menny){
 	char def = 'i';
-	printf("Szeretné, hogy az alapértelmezett értékekkel számoljak? i/n");
+	printf("Szeretné, hogy az alapértelmezett értékekkel számoljak? i/n\n");
 	scanf("%c", &def);
 	switch (def) {
 	case 'n':
@@ -64,8 +64,28 @@ void inithatar(float *sohat, float *fehhat, float *szenhat, int *menny){
 	break;
 
 	default:
+	*fehhat = 0.3;
+	*sohat = 0.5; 
+	*szenhat = 2.25;
 	printf("Kérem a malacok darabszámát!\n");
 	scanf("%d", menny);
 	break;
 	}
+}
+float z2_megoldas(zoldseg z1, zoldseg z2, igeny ig){
+	return ((ig.szen*ig.menny) - ((ig.menny*ig.feh) * z1.feh / z1.szen))/ //feladat.txt line 14
+				(z2.feh-z2.feh*z1.feh/z1.szen);
+}
+float z1_megoldas(zoldseg z1, zoldseg z2, igeny ig){
+	return ((ig.szen*ig.menny) - ((ig.menny*ig.feh) * z2.feh / z2.szen))/ //feladat.txt line 16
+				(z1.feh - z2.feh * z1.feh / z2.szen);
+}
+int so_ellenor(zoldseg z1, zoldseg z2, igeny ig){
+	float total_so = z1.so * z1.menny + z2.so * z2.menny;
+	if (total_so > ig.so * ig.menny) {
+	printf("A megadott feltételek mellett nem lehet sóhatár túllépése nélkül etetni!");
+	return 0;
+	}
+	printf("Sikeresen összeállított etetés!\n %ft répa, illetve %ft burgonya\n", z2.menny, z1.menny);
+	return 1;
 }

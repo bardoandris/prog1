@@ -2,13 +2,19 @@ Egy gazdaságban a sertéseket burgonyával és répával hizlalják. A burgonya
 
 Matek:
 
-Répa    Burgonya
+Répa(z2)  Burgonya(z1)
 feh=a   feh=d
 szén=b  szén=e
 tömeg=c tömeg=f
 
 Össz fehérje = x
+
 Össz szén = y
 
-c = (x-d*y/e) / (a-b*d*e)
-f = (x*a*y/b) / (d-a*e/b)
+c = (x-d*y/e) / (a-b*d/e)
+
+f = (x-a*y/b) / (d-a*e/b)
+
+c = ( x - d * y / e ) / ( a - b * d / e )
+
+f = ( x - a * y / b ) / ( d - a * e / b )
