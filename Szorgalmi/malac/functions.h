@@ -1,5 +1,8 @@
-typedef struct zoldsegek{
-	float so, szen, feh;
-} Zoldseg;
+typedef struct zoldseg{
+	float so, szen, feh, ar;
+} zoldseg;
 
-Zoldseg beker();
+zoldseg beker();
+float hatarertek(char *fajta);
+void initzoldseg(zoldseg *z1, zoldseg *z2);
+void inithatar(float *sohat,float *fehhat,float *szenhat, int *menny);
