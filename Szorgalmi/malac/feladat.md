@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Egy gazdaságban a sertéseket burgonyával és répával hizlalják.
 A burgonya 3% fehérjét és 15% szénhidrátot, a répa 1% fehérjét és 
 10% szénhidrátot, és mind a kettő 2% ásványi sót tartalmaz.
@@ -8,7 +7,6 @@ kell fogyasztani, de a menüben nem szabad 0,5 t-nál több ásványi sónak len
 mely a fenti paraméterek (szénhidrát-, fehérje-, sótartalom, só"határ", szükséglet,
 ár, stb) bekérése után kiszámolja, mennyi krumplit és mennyi répát használjunk, 
 hogy a legolcsóbban tunningoljuk a malacokat!
-=======
 
 Matek:
 
@@ -21,6 +19,4 @@ tömeg=c tömeg=f
 Össz szén = y
 
 c = (x-d*y/e) / (a-b*d*e)
-<<<<<<< HEAD
 f = (x*a*y/b) / (d-a*e/b)
-=======
